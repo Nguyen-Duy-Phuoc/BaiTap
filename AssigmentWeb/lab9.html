@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register form</title>
+    <link rel="stylesheet" type="text/css" href="css/register-form.css">
+</head>
+<body>
+<form method="GET" action="http://fptaptechhanoi.herokuapp.com/music/register-api.md.html" name="reg_form" onsubmit="return validate()">
+    <h2>Register form</h2>
+    <table>
+        <tbody>
+        <tr>
+            <td>
+                <label>First Name:</label>
+            </td>
+            <td>
+                <input type="text" name="firstName" placeholder="First Name">
+            </td>
+        <tr/>
+
+        <tr>
+            <td>
+                <label>Last Name:</label>
+            </td>
+            <td>
+                <input type="text" name="lastName" placeholder="Last Name">
+            </td>
+        <tr/>
+
+        <tr>
+            <td>
+                <label>Password:</label>
+            </td>
+            <td>
+                <input type="password" name="password" placeholder="Password">
+            </td>
+
+        <tr>
+            <td>
+                <label>Address:</label>
+            </td>
+            <td>
+                <input type="textarea" size="50" name="Address" placeholder="Address">
+            </td>
+        <tr/>
+
+        <tr>
+            <td>
+                <label>Phone:</label>
+            </td>
+            <td>
+                <input type="number" name="phone" placeholder="Phone">
+            </td>
+        <tr/>
+
+        <tr>
+            <td>
+                <label>Avatar:</label>
+            </td>
+            <td>
+                <input type="image" name="avatar">
+            </td>
+        <tr/>
+
+        <tr>
+            <td>
+                <label>Gender:</label>
+            </td>
+            <td>
+                <input type="radio" name="gender" value="male">
+                Male
+                <input type="radio" name="gender" value="female">
+                Female
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Email:</label>
+            </td>
+            <td>
+                <input type="text" name="email" placeholder="example@gmail.com">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Birthday</label>
+            </td>
+            <td>
+                <select name="day">
+                    <option value="ngay1">Ngày 1</option>
+                    <option value="ngay2">Ngày 2</option>
+                    <option value="ngay3">Ngày 3</option>
+                    <option value="ngay4">Ngày 4</option>
+                    <option value="ngay5">Ngày 5</option>
+                    <option value="ngay6">Ngày 6</option>
+                    <option value="ngay7">Ngày 7</option>
+                    <option value="ngay8">Ngày 8</option>
+                    <option value="ngay9">Ngày 9</option>
+                    <option value="ngay10">Ngày 10</option>
+                    <option value="ngay11">Ngày 11</option>
+                    <option value="ngay12">Ngày 12</option>
+                </select>
+
+                <select name="month">
+                    <option value="thang1">Tháng 1</option>
+                    <option value="thang2">Tháng 2</option>
+                    <option value="thang3">Tháng 3</option>
+                    <option value="thang4">Tháng 4</option>
+                    <option value="thang5">Tháng 5</option>
+                    <option value="thang6">Tháng 6</option>
+                    <option value="thang7">Tháng 7</option>
+                    <option value="thang8">Tháng 8</option>
+                    <option value="thang9">Tháng 9</option>
+                    <option value="thang10">Tháng 10</option>
+                    <option value="thang11">Tháng 11</option>
+                    <option value="thang12">Tháng 12</option>
+
+                </select>
+
+                <select name="year">
+
+                    <option value="nam0">Năm 2002</option>
+                    <option value="nam1">Năm 2003</option>
+                    <option value="nam2">Năm 2004</option>
+                    <option value="nam3">Năm 2005</option>
+                    <option value="nam4">Năm 2006</option>
+                    <option value="nam5">Năm 2007</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="submit" value="Submit">
+                <input type="reset" name="reset" value="Reset">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <form/>
+
+    <script src="js/register-form.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
++h1{
+    color: magenta;
+    font-family: "Agency FB";
+    font-size: 90px;
+    text-align: center;
+    background-color:rgb(255, 99, 10);
+    background-color:#ff6347;
+    background-color:hsl(9, 100%, 64%);
+    background-color:rgba(255, 99, 71, 0.5);
+    background-color:hsla(9, 100%, 64%, 0.2);
+}
+h2{
+    border: 2px solid Tomato;
+}
+h3{
+    border: 5px solid DodgerBlue;
+}
+
+body{
+    background-image: url('https://logos-world.net/wp-content/uploads/2020/06/Manchester-United-emblem.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+table, tr, th, td{
+    border: 3px solid rebeccapurple;
+    border-collapse: collapse;
+}
+table{
+    width: 500px;
+    height: 200px;
+}
+
