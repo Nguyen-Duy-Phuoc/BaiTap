@@ -1,0 +1,170 @@
+body{
+    background-color: #fafafa;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+
+
+.input-unit{
+    width: 100%;
+    height: auto;
+    float: left;
+    border: none;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+.input-unit-1{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.input-unit-2{
+    margin: 10px 0;
+}
+
+.input-unit-1{
+    background-color: #FFE081;
+}
+
+.input-unit-2{
+    background-color: #8EF3FF;
+}
+
+.input-unit .label >a{
+    color: black;
+}
+
+.conversion-unit{
+    box-shadow: none !important;
+}
+
+.input-field{
+    float: left;
+    margin: 5px 0;
+}
+
+.length-head h1{
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-weight: 500;
+    margin-top: 0 !important;
+    padding-top: 40px;
+}
+.intro{
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 30px;
+}
+.listunit ul li{
+    float: left;
+    font-size: 15px;
+    text-align: left;
+    list-style: none;
+}
+
+.ruler{
+    background-color: #333;
+}
+.container-convert{
+    margin-top: 50px;
+    color: whitesmoke;
+    line-height: 100px;
+    background-color: #333;
+    text-align: center;
+}
+.ruler img{
+    width: 100%;
+}
+.donviquydoi select{
+    width: 100%;
+    height: 40px;
+}
+
+.arrow i{
+    font-size: 40px;
+}
+.btnconvert{
+    outline: none;
+    padding: 5px 40px;
+    color: whitesmoke;
+    background-color: #4972b1;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.inputamount input{
+    height: 40px;
+    text-align: center;
+}
+.selectunit{
+    width: 100%;
+    height: 100%;
+    border: solid black;
+    border-radius: 10px;
+}
+.selectunit form{
+    padding-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.result{
+    padding: 0.5rem 1rem;
+    margin-top: 10px;
+    background-color: #d9edf7;
+    padding-left: 10%;
+    line-height: 1.428571429;
+    color: #31708f;
+    display: none;
+    margin-bottom: 20px;
+}
+
+.label{
+    padding:10px 15px;
+    margin: 0 -15px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px 5px 0 0;
+}
+
+.input-unit-1>.label{
+    background-color: #f0ad4e;
+}
+
+.input-unit-2>.label{
+    background-color: #5bc0de;
+}
+
+.convert input{
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.input-unit a:hover{
+    text-decoration: none;
+}
+
+.length-foot a:hover{
+    color: #5a6268;
+    text-decoration: none;
+}
+
+.listunit{
+    padding-top: 5%;
+    display: flex;
+    padding-bottom: 5%;
+    background-color: #e5f3f7 !important;
+}
+.listunit .unit{
+    font-size: 35px;
+}
+

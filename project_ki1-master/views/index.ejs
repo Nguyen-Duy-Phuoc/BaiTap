@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%-include('layout/head')%>
+  <link rel="stylesheet" type="text/css" href="./stylesheets/index.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/imagehover.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/layout/footer.css">
+  <title>Home</title>
+</head>
+<body>
+<%-include('layout/header')%>
+<%-include('layout/search')%>
+<section class="body">
+  <div class="container ">
+    <div class="row">
+      <main class="col-lg-8 col-md-12 main">
+        <div class="row">
+
+          <figure class="imghvr-flip-horiz home-boxes col-lg-3 col-md-6" style="display: flex;align-items: center;justify-content: center;">
+            <img src="./images/icon/ruler.png" alt="ruler.png">
+            <P>LENGTH</P>
+            <figcaption>
+              Metric and imperial length units converter, meter, centimeter, inch, foot, yard, mile
+            </figcaption>
+            <a href="/length"></a>
+          </figure>
+
+          <div class="col-md-1"></div>
+
+          <figure class="imghvr-flip-horiz home-boxes col-lg-3 col-md-6" style="display: flex;align-items: center;justify-content: center;">
+            <img src="./images/icon/area (2).png" alt="area.png">
+            <P>AREA</P>
+            <figcaption>
+              Metric and imperial area units converter, acre, hectare, square meter, square feet
+            </figcaption>
+            <a href="/area"></a>
+          </figure>
+
+          <div class="col-md-1"></div>
+
+          <figure class="imghvr-flip-horiz home-boxes col-lg-3 col-md-6" style="display: flex;align-items: center;justify-content: center;">
+            <img src="./images/icon/water-drop.png" alt="water-drop.png">
+            <P>VOLUME</P>
+            <figcaption>
+              Metric and imperial volume conversion, liter, gallon, cup, quart, ounce, cubic meter, cubic feet
+            </figcaption>
+            <a href="/volume"></a>
+          </figure>
+
+          <div class="col-md-1"></div>
+
+          <figure class="imghvr-flip-horiz home-boxes col-lg-3 col-md-6" style="display: flex;align-items: center;justify-content: center;">
+            <img src="./images/icon/scale.png" alt="scale.png">
+            <P>MASS</P>
+            <figcaption>
+              Metric and imperial weight and mass converter, pound, ounce, kilogram, gram, stone, ton
+            </figcaption>
+            <a href="/mass"></a>
+          </figure>
+
+          <div class="col-md-1"></div>
+
+          <figure class="imghvr-flip-horiz home-boxes col-lg-3 col-md-6" style="display: flex;align-items: center;justify-content: center;">
+            <img src="./images/icon/hot.png" alt="hot.png">
+            <P>TEMPERATURE</P>
+            <figcaption>
+              Temperature units converter, Celsius, Fahrenheit, Kelvin and Rankine
+            </figcaption>
+            <a href="/temperature"></a>
+          </figure>
+
+          <div class="col-md-1"></div>
+
+          <figure class="imghvr-flip-horiz home-boxes col-lg-3 col-md-6" style="display: flex;align-items: center;justify-content: center;">
+            <img src="./images/icon/money.png" alt="money.png">
+            <P>CURRENCY</P>
+            <figcaption>
+              Currency conversions for all countries, updated daily
+            </figcaption>
+            <a href="/currency"></a>
+          </figure>
+
+          <div class="col-md-1"></div>
+
+          <figure class="imghvr-flip-horiz home-boxes col-lg-3 col-md-6" style="display: flex;align-items: center;justify-content: center;">
+            <img src="./images/icon/speed.png" alt="speed.png">
+            <P>SPEED</P>
+            <figcaption>
+              Metric and imperial speed units conversion, mph, kph, m/s, ft/s
+            </figcaption>
+            <a href="/speed"></a>
+          </figure>
+
+          <div class="col-md-1"></div>
+
+          <figure class="imghvr-flip-horiz home-boxes col-lg-3 col-md-6" style="display: flex;align-items: center;justify-content: center;">
+            <img src="./images/icon/stopwatch.png" alt="clock.png">
+            <p>TIME</p>
+            <figcaption>
+              Date and time conversions, second, millisecond, minute, hour, day, week, month, year, century
+            </figcaption>
+            <a href="/time"></a>
+          </figure>
+
+          <div class="col-md-1"></div>
+
+          <figure class="imghvr-flip-horiz home-boxes col-lg-3 col-md-6" style="display: flex;align-items: center;justify-content: center;">
+            <img src="./images/icon/radar.png" alt="radar.png">
+            <p>FREQUENCY</p>
+            <figcaption>
+              Frequency units converter, hertz, kilohertz, radian hour, degree second
+            </figcaption>
+            <a href="/frequency"></a>
+          </figure>
+        </div>
+      </main>
+      <nav class="col-lg-4 col-md-12">
+        <div class="rankings">
+          <div class="title_rankings text-center col-md-12"><h4>Top Highest currencies<br>(USA)</h4></div>
+          <ul>
+            <li class="wrap-title-rank">
+              <div class="text-left title-rank rank">Name</div>
+              <div class="exchange-rage-title rank"><img src="../images/flags/america.png" style="width: 50%;height: 50%"></div>
+            </li>
+            <%for(let currencyUnit of topCurrency){%>
+            <li>
+              <div class="flag-imgs rank"><img src="<%=currencyUnit.QuocKi%>" style="width: 100%;height: 100%"></div>
+              <div class="name-currency rank"><a href="/Currency/Convert?from=<%=currencyUnit.KiHieu%>"><%=currencyUnit.TenDonVi%> (<%=currencyUnit.KiHieu%>)</a></div>
+              <div class="exchange-rage rank"><%=currencyUnit.TiLe%> USD</div>
+            </li>
+            <%}%>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</section>
+<%-include('layout/footer')%>
+<script type="text/javascript">
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.carousel-item{
+    max-height: 300px !important;
+}
+
+.carousel-item>img{
+    width: 100%;
+}
+
+.carousel-caption{
+    font-weight: 700 !important;
+}
