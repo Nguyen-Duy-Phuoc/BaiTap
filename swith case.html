@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p>phân loại điểm</p>
+        <input id="score" value="10" />
+        <button onclick="myfuction()">kiểm tra</button>
+        <p id="demo"></p>
+        <script>
+            function myfuction() {
+                let score, result;
+                score = document.getElementById("score").value;
+                result =
+                    score > 10
+                        ? "điểm không hợp lệ"
+                        : score >= 9 && score <= 10
+                        ? "học sinh xuất sắc"
+                        : score >= 8
+                        ? "học sinh giỏi"
+                        : score >= 7
+                        ? "học sinh khá"
+                        : score >= 5
+                        ? "học sinh tb"
+                        : "học sinh y";
+                document.getElementById("demo").innerHTML = result;
+            }
+        </script>
+    </body>
+</html>

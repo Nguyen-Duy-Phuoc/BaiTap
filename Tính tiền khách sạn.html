@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tính tiền phòng khách sạn</title>
+    </head>
+    <body>
+        <h3>Tính tiền phòng khách sạn</h3>
+        <table style="border-collapse: collapse">
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <th>Loại phòng</th>
+                    <th>Đơn giá/ Ngày</th>
+                    <th>Ngày checkin</th>
+                    <th>Ngày checkout</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select
+                            name=""
+                            id="quality"
+                            onchange="doValue()"
+                            required
+                        >
+                            <option value="">-Chọn-</option>
+                            <option value="500000">A</option>
+                            <option value="450000">B</option>
+                            <option value="350000">C</option>
+                        </select>
+                    </td>
+                    <td id="quality1"></td>
+                    <td><input type="date" name="checkin" id="checkin" /></td>
+                    <td><input type="date" name="checkout" id="checkout" /></td>
+                    <td><button onclick="doTotal()">Thanh toán</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            function doValue() {
+                let a = document.getElementById("quality").value;
+                document.getElementById(
+                    "quality1"
+                ).innerHTML = Intl.NumberFormat("vi-VN", {
+                    style: "currency",
+                    currency: "VND",
+                }).format(a);
+            }
+            function doTotal() {
+                let datein = document.getElementById("checkin").value;
+                let dateout = document.getElementById("checkout").value;
+                let a = document.getElementById("quality").value;
+                let d;
+                let c =
+                    (Date.parse(dateout) - Date.parse(datein)) /
+                    (1000 * 60 * 60 * 24);
+                if (c > 7) {
+                    d = Intl.NumberFormat("vi-VN", {
+                        style: "currency",
+                        currency: "VND",
+                    }).format(a * c * 0.9);
+                    document.write(
+                        "<h2>Số ngày lưu trú: " +
+                            c +
+                            "</h2><br><h2>Tổng tiền:" +
+                            d +
+                            "</h2>"
+                    );
+                } else {
+                    d = Intl.NumberFormat("vi-VN", {
+                        style: "currency",
+                        currency: "VND",
+                    }).format(a * c);
+                    document.write(
+                        "<h2>Số ngày lưu trú: " +
+                            c +
+                            "</h2><br><h2>Tổng tiền:" +
+                            d +
+                            "</h2>"
+                    );
+                }
+            }
+        </script>
+    </body>
+</html>

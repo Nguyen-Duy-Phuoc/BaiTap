@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tu dien don gian</title>
+    </head>
+    <body>
+     <div>
+        <input type="text" id="US" name="english" /></br>
+    </br>
+        <button onclick="convert()">translate</button>
+    </br>
+    </br>
+    <input type="text" id="VN"  />
+    </div>
+        <script>
+                let US =["BIT","ASCII","ROM","RAM","CPU","CU","ALU"];
+                let VN =[
+                    "đơn vị 0 hoặc 1","mã chuẩn","bộ nhớ trong","bộ nhớ ngoài","bộ xử lí trung tâm","bộ điều khiển","bộ số học và logic"];
+            function convert(){
+                let input = document.getElementById("US").value;
+                let found = US.indexOf(input);
+                    if(found >=0){
+                        document.getElementById('VN').value = VN[found];
+                    }
+                    else{
+                        alert('not found');
+                }
+            }
+            alert(input);
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
